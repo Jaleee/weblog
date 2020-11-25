@@ -4,15 +4,16 @@ import com.alibaba.fastjson.JSON;
 import com.jale.weblog.article.api.dataobject.Article;
 import com.jale.weblog.article.api.service.ArticleService;
 import com.jale.weblog.common.rocketmq.MQEnums;
-import com.jale.weblog.common.rocketmq.MQProducer;
 import com.jale.weblog.common.rocketmq.MQTags;
 import com.jale.weblog.user.api.dataobject.User;
 import com.jale.weblog.user.api.service.UserService;
+import com.jale.weblog.user.service.mq.MQTxProducer;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -56,8 +57,9 @@ public class UserController {
 
     @GetMapping("/testmq")
     public boolean testmq() {
-        Long body = new Random().nextLong();
-        boolean b = MQProducer.sendSync(MQEnums.TOPIC.getValue(), MQTags.ORDER_TAG, body.toString(), "下单-" + body.toString());
+        Long body = System.currentTimeMillis();
+        //boolean b = MQProducer.sendSync(MQEnums.TOPIC.getValue(), MQTags.ORDER_TAG, body.toString(), "下单-" + body.toString());
+        boolean b = MQTxProducer.sendTx(MQEnums.TX_TOPIC.getValue(), MQTags.ORDER_TAG, body.toString(), body.toString());
 
         return b;
     }

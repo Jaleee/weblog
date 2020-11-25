@@ -17,7 +17,14 @@ public enum MQEnums {
      * 主题Topic
      */
     TOPIC("weblog"),
-
+    /**
+     * 事务提供者/消费组
+     */
+    TRANS_GROUP("transGroup"),
+    /**
+     * 事务topic
+     */
+    TX_TOPIC("txTopic")
     ;
 
     private String value;

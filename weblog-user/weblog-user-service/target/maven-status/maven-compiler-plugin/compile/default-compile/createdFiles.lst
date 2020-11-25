@@ -1,0 +1,9 @@
+com\jale\weblog\user\service\shiro\UserRealm.class
+com\jale\weblog\user\service\impl\UserServiceImpl.class
+com\jale\weblog\user\service\mq\MQTxProducer$Producer.class
+com\jale\weblog\user\service\config\RedisConfig.class
+com\jale\weblog\user\service\shiro\ShiroConfig.class
+com\jale\weblog\user\service\mq\MQTxProducer.class
+com\jale\weblog\user\service\mq\TransactionListenerImpl.class
+com\jale\weblog\user\service\mq\MQTxProducer$Producer$1.class
+com\jale\weblog\user\service\dao\UserMapper.class

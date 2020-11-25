@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+dubbo:
+  application:
+    name: weblog-article-app
