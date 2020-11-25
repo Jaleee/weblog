@@ -1,5 +1,0 @@
-com\jale\weblog\article\service\dao\ArticleMapper.class
-com\jale\weblog\article\service\config\RedisConfig.class
-com\jale\weblog\article\service\impl\ArticleServiceImpl.class
-com\jale\weblog\article\service\mq\MQConsumer.class
-com\jale\weblog\article\service\mq\MQConsumer$1.class

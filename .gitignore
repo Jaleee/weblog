@@ -24,16 +24,22 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-.idea
+.idea/
 weblog-admin/src/test/
-weblog-article/weblog-article-api/src/main/resources/
 weblog-article/weblog-article-api/src/test/
 weblog-article/weblog-article-app/src/test/
-weblog-article/weblog-article-service/src/main/resources/mapper/
 weblog-article/weblog-article-service/src/test/
-weblog-common/src/main/resources/
 weblog-common/src/test/
-weblog-user/weblog-user-api/src/main/resources/
 weblog-user/weblog-user-api/src/test/
-weblog-user/weblog-user-service/src/main/resources/mapper/
-weblog-user/weblog-user-service/src/test/
+
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar

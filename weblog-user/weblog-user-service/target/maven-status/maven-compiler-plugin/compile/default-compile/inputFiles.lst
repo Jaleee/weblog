@@ -1,7 +1,0 @@
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\shiro\ShiroConfig.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\dao\UserMapper.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\shiro\UserRealm.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\config\RedisConfig.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\mq\TransactionListenerImpl.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\mq\MQTxProducer.java
-H:\idea_jale_ws\weblog\weblog-user\weblog-user-service\src\main\java\com\jale\weblog\user\service\impl\UserServiceImpl.java
