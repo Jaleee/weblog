@@ -13,4 +13,5 @@ public class IndexController {
     }
 
     private String name;
+    private String hoxfix;
 }
