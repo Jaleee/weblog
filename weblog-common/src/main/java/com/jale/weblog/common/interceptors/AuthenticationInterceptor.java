@@ -28,7 +28,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         }
 
         try {
-            LOGGER.info("执行认证流程");
+            LOGGER.info("执行认证流程_修改");
 
             return true;
         } catch (Exception e) {
