@@ -28,7 +28,7 @@ dubbo:
 
 logging:
   level:
-    com.jale.weblog.user.service: debug
+    com.jale.weblog.user: debug
 
 mybatis-plus:
   configuration:
