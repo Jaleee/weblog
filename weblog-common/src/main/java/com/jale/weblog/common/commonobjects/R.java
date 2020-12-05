@@ -1,4 +1,4 @@
-package com.jale.weblog.common.systemcomponents;
+package com.jale.weblog.common.commonobjects;
 
 import lombok.Data;
 

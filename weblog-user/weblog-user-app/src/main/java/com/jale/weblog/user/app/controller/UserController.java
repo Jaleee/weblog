@@ -5,10 +5,9 @@ import com.jale.weblog.article.api.dataobject.Article;
 import com.jale.weblog.article.api.service.ArticleService;
 import com.jale.weblog.common.annotations.IgnoreAuth;
 import com.jale.weblog.common.exception.WeblogException;
-import com.jale.weblog.common.interceptors.AuthenticationInterceptor;
 import com.jale.weblog.common.rocketmq.MQEnums;
 import com.jale.weblog.common.rocketmq.MQTags;
-import com.jale.weblog.common.systemcomponents.R;
+import com.jale.weblog.common.commonobjects.R;
 import com.jale.weblog.user.api.dataobject.User;
 import com.jale.weblog.user.api.service.UserService;
 import com.jale.weblog.user.service.mq.MQTxProducer;
@@ -19,10 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
-import java.util.Random;
 
 @RestController
 @RequestMapping("api/user")
@@ -107,6 +103,12 @@ public class UserController {
         user.setPassword("123");
 
         return R.success(user);
+    }
+
+    @GetMapping("/testServiceException")
+    public R testServiceException() {
+        userService.testServiceException();
+        return R.success();
     }
 
 }

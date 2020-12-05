@@ -1,6 +1,7 @@
 package com.jale.weblog.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.jale.weblog.common.exception.WeblogException;
 import com.jale.weblog.user.api.dataobject.User;
 import com.jale.weblog.user.api.service.UserService;
 import com.jale.weblog.user.service.dao.UserMapper;
@@ -33,4 +34,20 @@ public class UserServiceImpl implements UserService {
 
         return result;
     }
+
+    @Override
+    public void testServiceException() {
+        for (int i = 0; i < 10; i++) {
+            try {
+                if (i == 5) {
+                    throw new WeblogException("测试service方法内的异常");
+                }
+                System.out.println(i);
+            } catch (Exception e) {
+                System.out.println("捕获了异常:" + i);
+            }
+        }
+
+    }
+
 }
