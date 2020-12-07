@@ -24,7 +24,7 @@ public class GoodsController {
     @PostMapping("/selectPage")
     public R selectPage(@RequestBody @ApiParam("查询条件") GoodsSelectDto goodsSelectDto) {
         IPage<Goods> page = goodsService.selectPage(goodsSelectDto);
-        return R.success(new PageVo<>(page.getRecords(), page.getCurrent(), page.getSize(), page.getPages(), page.getTotal()));
+        return R.success(new PageVo(page));
     }
 
     @ApiOperation(value = "添加商品")
