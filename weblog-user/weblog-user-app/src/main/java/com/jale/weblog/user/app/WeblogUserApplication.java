@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {"com.jale.weblog"})
-@MapperScan("com.jale.weblog.*.service.dao")
+@MapperScan("com.jale.weblog.user.service.dao")
 @DubboComponentScan(basePackages = {"com.jale.weblog"})
 @EnableDubbo
 public class WeblogUserApplication {

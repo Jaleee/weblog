@@ -1,8 +1,6 @@
 package com.jale.weblog.user.app.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.jale.weblog.article.api.dataobject.Article;
-import com.jale.weblog.article.api.service.ArticleService;
 import com.jale.weblog.common.annotations.IgnoreAuth;
 import com.jale.weblog.common.exception.WeblogException;
 import com.jale.weblog.common.rocketmq.MQEnums;
@@ -27,9 +25,6 @@ public class UserController {
 
     @Reference
     private UserService userService;
-
-    @Reference
-    private ArticleService articleService;
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -63,13 +58,6 @@ public class UserController {
         redisTemplate.opsForValue().set("hello", "jale");
 
         return redisTemplate.opsForValue().get("hello").toString();
-    }
-
-    @PostMapping("/getUserArticle")
-    public String getUserArticle(@RequestBody Article article) {
-        List<Article> articles = articleService.selectList(article);
-
-        return JSON.toJSONString(articles);
     }
 
     @GetMapping("/testmq")

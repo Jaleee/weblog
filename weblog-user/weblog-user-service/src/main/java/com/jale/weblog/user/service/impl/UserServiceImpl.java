@@ -5,7 +5,6 @@ import com.jale.weblog.common.exception.WeblogException;
 import com.jale.weblog.user.api.dataobject.User;
 import com.jale.weblog.user.api.service.UserService;
 import com.jale.weblog.user.service.dao.UserMapper;
-import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +19,7 @@ public class UserServiceImpl implements UserService {
     public User login(User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>()
                 .eq("user_name", user.getUserName())
-                .eq("password", new Sha256Hash(user.getPassword()).toHex());
+                .eq("password", user.getPassword());
         User result = userMapper.selectOne(queryWrapper);
 
         return result;

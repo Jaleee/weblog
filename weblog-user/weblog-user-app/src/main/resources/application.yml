@@ -1,6 +1,2 @@
 server:
   port: 8081
-
-dubbo:
-  application:
-    name: weblog-user-app

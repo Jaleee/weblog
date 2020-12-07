@@ -19,7 +19,7 @@ dubbo:
   application:
     name: weblog-user-service
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://8.129.114.212:2181
   protocol:
     name: dubbo
     port: -1
@@ -39,4 +39,4 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
   mapperLocations: classpath*:mapper/*.xml
-  typeAliasesPackage: com.jale.weblog.*.api.dataobject
+  typeAliasesPackage: com.jale.weblog.user.api.dataobject
