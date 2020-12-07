@@ -16,7 +16,6 @@ spring:
     host: 8.129.114.212
     port: 6379
     password:
-    database: 0
 
 dubbo:
   application:
