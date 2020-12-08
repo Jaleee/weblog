@@ -11,7 +11,6 @@
 
     <artifactId>weblog-shopping-app</artifactId>
 
-
     <dependencies>
         <dependency>
             <artifactId>weblog-shopping-api</artifactId>
@@ -29,7 +28,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

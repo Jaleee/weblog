@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -73,4 +74,14 @@ public class GoodsServiceImpl implements GoodsService {
         return selectById(goods.getId());
     }
 
+    @Override
+    @Async
+    public void testAsyncTask() {
+        try {
+            Thread.sleep(3000);
+            System.out.println("异步任务执行成功了");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

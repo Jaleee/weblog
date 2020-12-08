@@ -20,4 +20,6 @@ public interface GoodsService {
 
     Goods updateById(Goods goods);
 
+    void testAsyncTask();
+
 }

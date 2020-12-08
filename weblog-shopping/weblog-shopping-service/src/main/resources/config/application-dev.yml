@@ -16,6 +16,15 @@ spring:
     host: 8.129.114.212
     port: 6379
     password:
+  mail:
+    username: 1274684480@qq.com
+    password: rfqiozimygsggiag
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
 
 dubbo:
   application:
