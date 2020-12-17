@@ -10,4 +10,8 @@ public interface UserService {
 
     void testServiceException();
 
+    int insert(User user);
+
+    void testSeata(String name);
+
 }

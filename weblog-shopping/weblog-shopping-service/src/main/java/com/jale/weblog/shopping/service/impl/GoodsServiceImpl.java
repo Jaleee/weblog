@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.jale.weblog.common.exception.WeblogException;
 import com.jale.weblog.shopping.api.dataobject.Goods;
 import com.jale.weblog.shopping.api.dto.GoodsSelectDto;
 import com.jale.weblog.shopping.api.service.GoodsService;
@@ -51,6 +52,11 @@ public class GoodsServiceImpl implements GoodsService {
     public Goods insert(Goods goods) {
         goods.setAddTime(new Date());
         goodsMapper.insert(goods);
+
+        if (goods.getName().contains("报错")) {
+            int i = 1/0;
+        }
+
         return selectById(goods.getId());
     }
 

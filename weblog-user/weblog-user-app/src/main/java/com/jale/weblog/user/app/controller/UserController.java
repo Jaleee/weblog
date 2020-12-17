@@ -6,6 +6,7 @@ import com.jale.weblog.common.exception.WeblogException;
 import com.jale.weblog.common.rocketmq.MQEnums;
 import com.jale.weblog.common.rocketmq.MQTags;
 import com.jale.weblog.common.commonobjects.R;
+import com.jale.weblog.shopping.api.service.GoodsService;
 import com.jale.weblog.user.api.dataobject.User;
 import com.jale.weblog.user.api.service.UserService;
 import com.jale.weblog.user.service.mq.MQTxProducer;
@@ -25,6 +26,9 @@ public class UserController {
 
     @Reference
     private UserService userService;
+
+    @Reference
+    private GoodsService goodsService;
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -96,6 +100,12 @@ public class UserController {
     @GetMapping("/testServiceException")
     public R testServiceException() {
         userService.testServiceException();
+        return R.success();
+    }
+
+    @GetMapping("/testSeata/{name}")
+    public R testSeata(@PathVariable String name) {
+        userService.testSeata(name);
         return R.success();
     }
 

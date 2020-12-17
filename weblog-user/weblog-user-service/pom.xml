@@ -65,6 +65,17 @@
             <artifactId>weblog-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.jale</groupId>
+            <artifactId>weblog-shopping-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

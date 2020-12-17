@@ -4,7 +4,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://8.129.114.212:3306/weblog?autoReconnect=true&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
     username: root
-    password: root14357
+    password: 123456
   redis:
     lettuce:
       pool:
@@ -40,3 +40,9 @@ mybatis-plus:
       logic-not-delete-value: 0
   mapperLocations: classpath*:mapper/*.xml
   typeAliasesPackage: com.jale.weblog.user.api.dataobject
+
+seata:
+  application-id: weblog-user
+  tx-service-group: weblog-group
+  service:
+    grouplist: 8.129.114.212:8091

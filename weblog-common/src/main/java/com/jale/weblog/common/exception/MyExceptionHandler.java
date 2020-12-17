@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class MyExceptionHandler {
 
-    @ExceptionHandler(value = Exception.class)
-    public R customException(Exception e) {
-        e.printStackTrace();
-        return R.error(e.getMessage());
+    @ExceptionHandler(value = WeblogException.class)
+    public R customException(WeblogException e) {
+        System.out.println(e.getMsg());
+        return R.error(e.getMsg());
     }
 
 }
