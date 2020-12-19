@@ -14,4 +14,6 @@ public interface UserService {
 
     void testSeata(String name);
 
+    Integer order(Long userId, Long goodsId, Integer goodsCount);
+
 }

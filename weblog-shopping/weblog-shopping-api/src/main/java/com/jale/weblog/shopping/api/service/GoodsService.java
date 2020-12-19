@@ -5,6 +5,7 @@ import com.jale.weblog.shopping.api.dataobject.Goods;
 import com.jale.weblog.shopping.api.dto.GoodsSelectDto;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GoodsService {
 
@@ -21,5 +22,7 @@ public interface GoodsService {
     Goods updateById(Goods goods);
 
     void testAsyncTask();
+
+    Integer casUpdate(Map<String, Object> params);
 
 }

@@ -9,7 +9,6 @@ public class MyExceptionHandler {
 
     @ExceptionHandler(value = WeblogException.class)
     public R customException(WeblogException e) {
-        System.out.println(e.getMsg());
         return R.error(e.getMsg());
     }
 

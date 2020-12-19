@@ -1,24 +1,31 @@
 package com.jale.weblog.shopping.api.dataobject;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class Orderform {
+public class Orderform implements Serializable {
 
-    @TableId
+    @TableId(type = IdType.INPUT)
     private Integer orderNumber;
 
-    private Integer userId;
+    private Long userId;
 
-    private String goodsId;
+    private Integer goodsId;
 
-    private Integer goodsName;
+    private String goodsName;
 
     private Integer stockCount;
+
+    private BigDecimal singlePrice;
+
+    private BigDecimal totalPrice;
 
     private Date addTime;
 

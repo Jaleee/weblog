@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class ScheduledService {
 
     // 秒 分 时 日 月 周几
-    @Scheduled(cron = "0 * * * * ?")
+    //@Scheduled(cron = "0 * * * * ?")
     public void hello() {
         System.out.println("定时任务，hello");
     }

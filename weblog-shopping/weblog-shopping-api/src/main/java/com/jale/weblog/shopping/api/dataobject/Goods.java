@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @ApiModel("商品")
@@ -21,6 +22,9 @@ public class Goods implements Serializable {
     @ApiModelProperty(value = "库存数量", example = "1")
     private Integer stockCount;
 
+    @ApiModelProperty(value = "单价")
+    private BigDecimal price;
+
     @ApiModelProperty(value = "添加事件")
     private Date addTime;
 
@@ -30,5 +34,7 @@ public class Goods implements Serializable {
     @ApiModelProperty(value = "是否已删除", example = "1")
     @TableLogic
     private Integer isDelete;
+
+
 
 }

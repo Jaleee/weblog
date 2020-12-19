@@ -3,16 +3,19 @@ package com.jale.weblog.shopping.api.dataobject;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class ShoppingCar {
+public class ShoppingCar implements Serializable {
 
     private Integer id;
 
-    private String goodsId;
+    private Long userId;
 
-    private Integer goodsName;
+    private Integer goodsId;
+
+    private String goodsName;
 
     private Integer stockCount;
 

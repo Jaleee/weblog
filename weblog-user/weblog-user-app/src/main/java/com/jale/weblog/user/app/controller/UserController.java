@@ -109,4 +109,9 @@ public class UserController {
         return R.success();
     }
 
+    @GetMapping("/order/{userId}/{goodsId}/{goodsCount}")
+    public R order(@PathVariable Long userId, @PathVariable Long goodsId, @PathVariable Integer goodsCount) {
+        return R.success(userService.order(userId, goodsId, goodsCount));
+    }
+
 }

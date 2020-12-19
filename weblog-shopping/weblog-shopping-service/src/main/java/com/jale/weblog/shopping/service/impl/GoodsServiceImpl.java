@@ -60,7 +60,7 @@ public class GoodsServiceImpl implements GoodsService {
         return selectById(goods.getId());
     }
 
-    @Cacheable(value = "goods", key = "#id")
+    //@Cacheable(value = "goods", key = "#id")
     @Override
     public Goods selectById(Integer id) {
         return goodsMapper.selectById(id);
@@ -72,7 +72,7 @@ public class GoodsServiceImpl implements GoodsService {
         return goodsMapper.deleteById(id);
     }
 
-    @CachePut(value = "goods", key = "#goods.id")
+    //@CachePut(value = "goods", key = "#goods.id")
     @Override
     public Goods updateById(Goods goods) {
         goods.setUpdateTime(new Date());
@@ -89,5 +89,10 @@ public class GoodsServiceImpl implements GoodsService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public Integer casUpdate(Map<String, Object> params) {
+        return goodsMapper.casUpdate(params);
     }
 }

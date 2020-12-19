@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class WeblogException extends RuntimeException {
 
-    String msg;
+    private String msg;
 
     public WeblogException(String msg) {
         super(msg);

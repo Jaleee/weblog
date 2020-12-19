@@ -1,10 +1,22 @@
 # 开发环境
 spring:
+  application:
+    name: weblog-shopping
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://8.129.114.212:3306/weblog?autoReconnect=true&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://8.129.114.212:3306/weblog?autoReconnect=true&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&useAffectedRows=true
     username: root
     password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 初始化大小，最小，最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位毫秒
+      time-between-eviction-runs-millis: 60000
   cache:
     type: redis
   redis:
@@ -49,11 +61,10 @@ mybatis-plus:
       id-type: auto
       logic-delete-value: 1
       logic-not-delete-value: 0
-  mapperLocations: classpath*:mapper/*.xml
+  mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: com.jale.weblog.shopping.api.dataobject
 
 seata:
-  application-id: weblog-shopping
   tx-service-group: weblog-group
   service:
-    grouplist: 8.129.114.212:8091
+    grouplist: 8.129.114.212:8096
